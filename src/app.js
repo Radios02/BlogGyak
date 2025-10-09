@@ -14,12 +14,7 @@ app.use(cors());
 app.use("/posts",postRoutes);
 app.use("/users",userRoutes);
 
-app.use((err,req,res,next)=>{
-    if (err) {
-    res.status(500).json({error: err.message});
-    }
-});
 
 app.listen(PORT,()=>{
     console.log(`The server is running on port: ${PORT}`)
-})
+});
